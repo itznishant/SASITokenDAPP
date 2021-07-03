@@ -30,14 +30,14 @@ App = {
   		App.contracts.SASITokenSale = TruffleContract(SASITokenSale);
       App.contracts.SASITokenSale.setProvider(App.web3Provider);
   		App.contracts.SASITokenSale.deployed().then(function(SASITokenSale) {
-        console.log("SASI Token Sale Address: ", SASITokenSale.address);
+        // console.log("SASI Token Sale Address: ", SASITokenSale.address);
       });
     }).done(function() {
       $.getJSON("SASIToken.json", function(SASIToken) {
         App.contracts.SASIToken = TruffleContract(SASIToken);
         App.contracts.SASIToken.setProvider(App.web3Provider);
         App.contracts.SASIToken.deployed().then(function(SASIToken) {
-          console.log("SASI Token Address: ", SASIToken.address);
+          // console.log("SASI Token Address: ", SASIToken.address);
         });
         
         App.listenForEvents();
